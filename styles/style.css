@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&family=Roboto:wght@400;700;900&display=swap");
+
+#main {
+  background-color: #dbd3c9;
+  padding: 10px 10px 10px 10px;
+}
+
+#img-caption {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#image {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+#img-div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 500px;
+}
+
+.responsive-img {
+  height: auto;
+  margin-top: 0 auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+h1 {
+  color: #000;
+  font-family: "Passion One", cursive;
+  text-align: center;
+}
+
+h1 + p {
+  text-align: center;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+
+li {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.artist {
+  display: grid;
+  grid-template-columns: 20% 20% 60%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.thin-black-border {
+  border: 4px solid #000;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.spaces {
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+#tribute-info ul {
+  padding: 15px;
+}
+
+.spaces > b {
+  padding-left: 18px;
+}
+
+.spaces ul {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+h3 {
+  text-align: center;
+}
+
+ul {
+  font-size: 20px;
+  text-align: left;
+}
+
+@media (max-width: 3000px) {
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .artist {
+    display: grid;
+  }
+
+  h3 {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .artist > img {
+    grid-area: main-image;
+    margin: 0 auto;
+  }
+
+  .artist > .spaces {
+    grid-area: left;
+    padding-left: 0;
+  }
+
+  .artist > div:not(.spaces) {
+    grid-area: right;
+  }
+
+  .artist {
+    display: grid;
+    grid-template:
+      "main-image main-image"
+      "left right";
+  }
+
+  #tribute-info > ul {
+    padding: 0;
+  }
+
+  .responsive-img {
+    max-width: 50%;
+    width: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .responsive-img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .artist {
+    display: grid;
+    grid-template:
+      "main-image"
+      "left"
+      "right";
+  }
+}
